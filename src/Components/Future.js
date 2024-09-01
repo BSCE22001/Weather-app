@@ -11,7 +11,7 @@ export default function Future(props) {
   const getDate = (date)=>{
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     const data = date.split("-");
-    return `${data[2]}, ${months[Number(data[1])]}`
+    return `${data[2]}, ${months[Number(data[1]) - 1]}`
   }
 
   return (
