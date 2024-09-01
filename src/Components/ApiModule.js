@@ -13,6 +13,13 @@ export default function ApiModule() {
     <>
       {state?.weather?.isLoading ? (
         <Pendulum />
+      ) : state?.weather?.isError ? (
+        <>
+          <div className="justify-center items-center text-center text-white font-dosis font-semibold text-3xl">
+            <p>Some Error Occurred While fetching the data</p>
+            <p>Please try again after some time</p>
+          </div>
+        </>
       ) : state?.weather?.data?.error ? (
         <>
           <div className="mt-5 mb-5">
